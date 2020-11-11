@@ -16,7 +16,14 @@ exports.render = (data) => {
             </svg>
           </a>
           <nav style="--delay: 0.35s">
-            <a href="/blog">Blog</a>
+            <a
+              href="/blog"
+              aria-current="${
+                data.page.url.includes("/blog/") ? "page" : "false"
+              }"
+            >
+              Blog
+            </a>
           </nav>
         </header>
         <main>

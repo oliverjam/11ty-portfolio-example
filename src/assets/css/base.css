@@ -71,7 +71,9 @@ body {
   text-decoration: none;
 }
 
-.site-header > nav a:hover {
+.site-header > nav a:hover,
+/* `aria-current` marks the link to the page you're on */
+.site-header > nav a[aria-current="page"] {
   text-decoration: underline;
 }
 
