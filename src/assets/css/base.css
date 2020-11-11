@@ -3,12 +3,18 @@
 }
 
 html {
+  --text-dark: hsl(245, 15%, 25%);
   font-size: 1.125rem;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
+
+  /* use grid to make the content always fill the height */
+  display: grid;
+  grid-template-rows: auto 1fr;
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --gradient-1: #ffb100;
@@ -36,27 +42,36 @@ body {
     var(--gradient-10) 0 90%
   );
   background-size: cover;
+  color: var(--text-dark);
 }
 
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
 
-header > nav {
+.site-header > * {
+  --delay: 0s;
+  animation: fadeIn 2s calc(0.5s + var(--delay)) forwards,
+    slideIn 1s calc(0.5s + var(--delay)) forwards;
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.site-header > nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-header a {
+.site-header a {
   color: inherit;
   text-decoration: none;
 }
 
-header > nav a:hover {
+.site-header > nav a:hover {
   text-decoration: underline;
 }
 
@@ -68,6 +83,34 @@ p {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   margin-top: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* disable ALL animation for users who choose this setting */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

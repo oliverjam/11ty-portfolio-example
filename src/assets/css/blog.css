@@ -1,0 +1,24 @@
+.post {
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1rem;
+  padding: clamp(1rem, 1rem + 3vw, 4rem);
+  box-shadow: 0 1rem 3rem 0 hsla(30, 50%, 20%, 0.35),
+    0 0.5rem 1rem hsla(0, 0%, 0%, 0.2);
+  --delay: 0s;
+  /* keyframe animations defined in base.css */
+  animation: fadeIn 2s var(--delay) forwards, slideIn 1s var(--delay) forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.post__header {
+  display: grid;
+  grid-row-gap: 0.25rem;
+}
+
+.post__header > * {
+  margin: 0;
+}
