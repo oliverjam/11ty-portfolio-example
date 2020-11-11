@@ -1,6 +1,5 @@
 ---
 title: My first post
-layout: blog
 date: 2020-10-21
 ---
 
