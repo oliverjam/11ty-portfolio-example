@@ -30,9 +30,8 @@
 }
 
 .post:hover {
-  transform: scale(1.025);
-  box-shadow: 0 1rem 3rem 0 hsla(30, 50%, 20%, 0.35),
-    0 0.5rem 1rem hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 1rem 3rem 0 hsla(30, 50%, 20%, 0.4),
+    0 0.5rem 1rem hsla(0, 0%, 0%, 0.3);
 }
 
 .post a {
