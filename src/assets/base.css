@@ -2,10 +2,40 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1.125rem;
+}
+
 body {
+  min-height: 100vh;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --gradient-1: #ffb100;
+  --gradient-2: #ffb800;
+  --gradient-3: #ffbf00;
+  --gradient-4: #ffc500;
+  --gradient-5: #ffcc00;
+  --gradient-6: #ffd624;
+  --gradient-7: #ffe038;
+  --gradient-8: #ffeb49;
+  --gradient-9: #fff558;
+  --gradient-10: #ffff66;
+  background-color: var(--gradient-4);
+  background-image: radial-gradient(
+    circle at bottom left,
+    var(--gradient-1) 0,
+    var(--gradient-2) 0 10%,
+    var(--gradient-3) 0 20%,
+    var(--gradient-4) 0 30%,
+    var(--gradient-5) 0 40%,
+    var(--gradient-6) 0 50%,
+    var(--gradient-7) 0 60%,
+    var(--gradient-8) 0 70%,
+    var(--gradient-9) 0 80%,
+    var(--gradient-10) 0 90%
+  );
+  background-size: cover;
 }
 
 header {
@@ -36,4 +66,8 @@ main {
 
 p {
   line-height: 1.5;
+}
+
+h1 {
+  margin-top: 0;
 }
