@@ -5,6 +5,6 @@ exports.data = {
 exports.render = (data) => {
   return `
     <h1>${data.title}</h1>
-    <main class="post">${data.content}</main>
+    <div class="post">${data.content}</div>
   `;
 };
