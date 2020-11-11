@@ -5,7 +5,7 @@ exports.render = (data) => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>${data.title} | Oliver's portfolio</title>
+        <title>${data.title} | ${data.site.title}</title>
         <link href="/assets/css/base.css" rel="stylesheet">
       </head>
       <body>
