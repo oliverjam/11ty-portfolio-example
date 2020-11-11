@@ -1,0 +1,50 @@
+.posts-wrapper {
+  padding: 2rem;
+  padding: clamp(1rem, 1rem + 6vw, 6rem);
+}
+
+.posts {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  font-size: 2rem;
+  font-size: clamp(1rem, 1rem + 2vw, 2rem);
+  font-weight: 900;
+}
+
+.post {
+  position: relative;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1rem 1.5rem 0 hsla(30, 50%, 20%, 0.15),
+    0 0.5rem 1rem hsla(0, 0%, 0%, 0.2);
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  --delay: 0s;
+  animation: fadeIn 2s var(--delay) forwards, slideIn 1s var(--delay) forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.post:hover {
+  transform: scale(1.025);
+  box-shadow: 0 1rem 3rem 0 hsla(30, 50%, 20%, 0.35),
+    0 0.5rem 1rem hsla(0, 0%, 0%, 0.2);
+}
+
+.post a {
+  text-decoration: none;
+}
+
+/* ensure whole card is clickable */
+.post a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
