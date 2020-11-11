@@ -11,7 +11,7 @@ exports.render = (data) => {
   }).format(data.date);
 
   return /*html*/ `
-    <link href="/assets/css/blog.css" rel="stylesheet">
+    <link href="/assets/css/post.css" rel="stylesheet">
     <div class="post">
       <header class="post__header">
         <h1>${data.title}</h1>
